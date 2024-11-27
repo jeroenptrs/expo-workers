@@ -1,31 +1,33 @@
 {
-  "name": "expo-adapter-workers",
+  "name": "@jeroenpeeters/expo-workers",
   "version": "1.0.4",
   "type": "module",
   "bin": {
-    "expo-adapter-workers": "bin/pre-deploy.js"
+    "expo-workers": "bin/pre-deploy.js"
   },
   "exports": {
     ".": "./dist/index.js"
   },
   "files": [
     "dist",
+    "src",
     "bin"
   ],
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc src/*.ts --declaration --moduleResolution NodeNext --module NodeNext --outDir dist"
+    "build": "tsc"
   },
   "license": "MIT",
   "dependencies": {
-    "@cloudflare/kv-asset-handler": "^0.3.1",
-    "@types/find-node-modules": "^2.1.2",
-    "find-node-modules": "^2.1.3",
+    "@cloudflare/kv-asset-handler": "^0.3.4",
+    "find-node-modules": "^2",
     "replace-in-file": "^7.1.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.25",
-    "expo": "^50.0.11",
-    "typescript": "^5.4.2"
+    "@types/find-node-modules": "^2",
+    "@types/node": "^22",
+    "expo": "^52",
+    "expo-router": "^4.0.9",
+    "typescript": "^5"
   }
 }
